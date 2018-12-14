@@ -67,14 +67,7 @@ a:hover {
   display: none;
 }
 
-@media(min-width:768px) {
-    .parent-card {
-        width:100%;
-    }
-    .flex {
-        flex-wrap: nowrap;
-    }
-}
+
 /* .thumbnail {
     width: 190px;
     margin-left: auto;
@@ -136,6 +129,10 @@ a.btn {
 }
 #banner-loco {
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../img/loco.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #title-landing {
     position:absolute;
@@ -154,15 +151,75 @@ a.btn {
     border: white;
 }
 .card-dish {
-    height: 33.33vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    text-align: center;
-    /* padding: 5%; */
+    /* height: 100%; */
+    width: 100%;
 }
 .img-dish {
     border-radius: 50%;
     width: 20vh;
-    padding: 5%;
+    height: 20vh;
+}
+.img-div {
+    width:50%;
+    align-items: center;
+}
+.dishtext-div {
+    width:50%;
+}
+
+.dishes-div {
+    border: 2px black solid;
+    height: 80%;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10vh;
+    display: flex;
+}
+.middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+#bestseller-div {
+
+}
+#title-div {
+    background-color: black;
+    color: white;
+    width: 40%;
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-align: center;
+    position: absolute;
+    margin-left: 30%;
+    margin-top:8vh;
+}
+@media(min-width:768px) {
+    .parent-card {
+        width:100%;
+    }
+    .flex {
+        flex-wrap: nowrap;
+    }
+    .card-dish {
+        display: block;
+        margin: auto;
+    }   
+    .middle {
+        margin: auto;
+        text-align: center;
+    }
+    .img-div {
+        height: 35vh;
+    }
+    .dishtext-div {
+        height: 45vh;
+        justify-content: unset;
+    }
+    .resto-description {
+        font-size: 2em;
+    }
 }
